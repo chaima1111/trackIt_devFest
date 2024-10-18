@@ -18,15 +18,17 @@ import Expense from "./models/Expense.js";
 import Kpi from "./models/Kpi.js";
 import Revenu from "./models/Revenu.js";
 import Workspace from "./models/Workspace.js";
+import OverallStat from "./models/OverallSatt.js";
 
-// import {
-//   dataUser,
-//   dataProduct,
-//   dataProductStat,
-//   dataTransaction,
-//   dataOverallStat,
-//   dataAffiliateStat,
-// } from "./data/index.js";
+import {
+  dataUser,
+  dataWorkspace,
+  dataExpense,
+  dataRevenu,
+  dataCashFlow,
+  dataKpi,
+  dataOverallStat,
+} from "./data/index.js";
 
 /* CONFIGURATION */
 dotenv.config();
@@ -56,11 +58,13 @@ mongoose
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
 
     /* ONLY ADD DATA ONE TIME */
-    // AffiliateStat.insertMany(dataAffiliateStat);
-    // OverallStat.insertMany(dataOverallStat);
-    // Product.insertMany(dataProduct);
-    // ProductStat.insertMany(dataProductStat);
-    // Transaction.insertMany(dataTransaction);
-    // User.insertMany(dataUser);
+   
+  // User.insertMany(dataUser);
+  //   Workspace.insertMany(dataWorkspace);
+  //   Expense.insertMany(dataExpense);
+  //   Revenu.insertMany(dataRevenu);
+  //   CashFlow.insertMany(dataCashFlow);
+  //   Kpi.insertMany(dataKpi);
+  //   OverallStat.insertMany(dataOverallStat);
   })
   .catch((error) => console.log(`${error} did not connect`));
