@@ -11,6 +11,7 @@ const SignUp = () => {
     const navigate= useNavigate()
     const handleSubmit =(e)=>{
         e.preventDefault()
+       
         axios.post('http://localhost:5001/register',{name,email,company,password})
         .then(result=>{console.log(result)
             navigate('/form1')
@@ -41,7 +42,6 @@ const SignUp = () => {
                 type="email"
                 id="email"
                 name="email"
-                // value={formData.email}
                 onChange={(e)=>setEmail(e.target.value)}
                 required
               />
@@ -52,7 +52,6 @@ const SignUp = () => {
                 type="text"
                 id="company"
                 name="comany"
-                // value={formData.name}
                 onChange={(e)=>setCompany(e.target.value)}
                 required
               />

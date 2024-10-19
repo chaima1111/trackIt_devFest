@@ -1,25 +1,26 @@
 import "./Form1.css";
-import React, { useState } from "react";
+import  { useState } from "react";
 import logo from "../../assets/logo.trakcit.png";
 import ec1 from "../../assets/Ellipse 830.png";
 import ec2 from "../../assets/Ellipse 831.png";
 import chart_right from "../../assets/04.png";
 import chart_left from "../../assets/Container.png";
-import { Link } from "react-router-dom";
+import axios from "axios"
+import { useNavigate } from "react-router-dom";
 function Form1() {
-  // const [name,setName]=useState();
-  // const [email,setEmail]=useState();
-  // const [company,setCompany]=useState();
-  // const [password,setPassword]=useState();
-  // const navigate= useNavigate()
-  // const handleSubmit =(e)=>{
-  //     e.preventDefault()
-  //     axios.post('http://localhost:5001/register',{name,email,company,password})
-  //     .then(result=>{console.log(result)
-  //         navigate('/form1')
-  //     })
-  //     .catch(err=>console.log(err))
-  // }
+  const [cash_inflow,setCash_inflow]=useState();
+  const [cash_outflow,setCash_outflow]=useState();
+  const [CashFlow_type,setCashFlow_type]=useState();
+  const navigate= useNavigate()
+  const handleSubmit =(e)=>{
+      e.preventDefault()
+      axios.post('http://localhost:5001/cash',{cash_inflow,cash_outflow,CashFlow_type})
+      .then(result=>{console.log(result)
+          navigate('/form2')
+      })
+      
+      .catch(err=>console.log(err))
+  }
   
   return (
     <div className="Form1-container">
@@ -47,28 +48,46 @@ function Form1() {
           <span>KPI goal</span>
         </nav>
 
-        <form >
+        <form onSubmit={handleSubmit}>
           <h2>Fill out your cost flow</h2>
-          <label>
+      
+         
+          <label htmlFor="cash_inflow">
             Cost inflow
             <input
               type="number"
-              name="inflow"
-          
-            />
-          </label>
+              id="cash_inflow"
+              name="cash_inflow"
+              onChange={(e)=>setCash_inflow(e.target.value)}
+               />
+                    </label>
 
-          <label>
+
+          <label htmlFor="cash_outflow">
             Cost outflow
+
             <input
               type="number"
-              name="outflow"
-        
+              id="cash_outflow"
+              name="cash_outflow"
+              onChange={(e)=>setCash_outflow(e.target.value)}
+
               required
             />
-          </label>
+                        </label>
 
-          <Link to="/form2" type="submit" >Next</Link>
+          <label htmlFor="CashFlow_type">
+            CashFlow Type
+            <input
+              type="text"
+              id="CashFlow_type"
+              name="CashFlow_type"
+              onChange={(e)=>setCashFlow_type(e.target.value)}
+            />
+                        </label>
+
+
+          <button type="submit" >Next</button>
         </form>
       </div>
     </div>

@@ -5,11 +5,24 @@ import ec2 from "../../assets/Ellipse 831.png";
 import chart_left from "../../assets/Container.png";
 import chart_right from "../../assets/04.png";
 import './Form2.css'
-import { Link } from "react-router-dom";
-
+import axios from "axios"
+import { useNavigate } from "react-router-dom";
 
 function Form2() {
 
+  const [revenue_type,setExpense_type]=useState();
+  const [amount,setAmount]=useState();
+  const navigate= useNavigate()
+  const handleSubmit =(e)=>{
+      e.preventDefault()
+      axios.post('http://localhost:5001/revenu',{revenue_type,amount})
+      .then(result=>{console.log(result)
+          navigate('/form3')
+      })
+      
+      .catch(err=>console.log(err))
+  }
+  
 
   return (
     <div className="Form1-container">
@@ -32,34 +45,36 @@ function Form2() {
       <div className="Form1-form-container">
         <nav>
           <span>Cost flow</span> ──
-          <span className="active">Expenses</span> ──
-          <span>Revenue</span> ──
+          <span >Expenses</span> ──
+          <span className="active">Revenue</span> ──
           <span>KPI goal</span>
         </nav>
-
-        <form >
+      
+        <form onSubmit={handleSubmit}>
           <h2>Fill out your Revenue</h2>
-          <label>
-            Product sales
+          <label htmlFor="expense_type">
+          Revunu  type
             <input
-              type="number"
-              name="Productsales"
-          
+        type="text"
+        id="revenue_type"
+        name="revenue_type"
+        onChange={(e)=>setExpense_type(e.target.value)}
               required
             />
           </label>
 
-          <label>
-            Service income
+          <label  htmlFor="amount">
+            The amount 
             <input
-              type="number"
-              name="Serviceincome"
-            
+           type="number"
+           id="amount"
+           name="amount"
+           onChange={(e)=>setAmount(e.target.value)}
               required
             />
           </label>
 
-          <Link to="/form3" type="submit" >Next</Link>
+          <button  type="submit" >Next</button>
         </form>
       </div>
     </div>

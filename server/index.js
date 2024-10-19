@@ -60,30 +60,7 @@ app.use(cors());
 //     })
 // })
 
-// Register
-// app.post('/register', async (req, res) => {
-//   try {
-//     const workspaceId = Math.floor(1000 + Math.random() * 9000);
-//     const newPassword = await bcrypt.hash(req.body.password, 10);
-//     await User.create({
-//       name: req.body.name,
-//       email: req.body.email,
-//       company: req.body.company,
-//       password: newPassword,
-//       workspace_id: workspaceId,
-//       role: 'viewer', // Automatically assigning the role
-//     });
-    
-//     res.json({ status: 'ok' });
-//   } catch (err) {
-//     // More descriptive error handling
-//     if (err.code === 11000) { // Mongoose error for duplicate keys, e.g., email
-//       res.json({ status: 'error', error: 'Email already exists' });
-//     } else {
-//       res.json({ status: 'error', error: 'Registration failed' });
-//     }
-//   }
-// });
+
 
 
 
@@ -131,6 +108,103 @@ app.post('/register', async (req, res) => {
       password: newPassword,
       workspace_id: workspaceId,
       role: 'viewer',
+    });
+    
+    res.json({ status: 'ok' });
+  } catch (err) {
+    console.error('Error during user registration:', err);
+    res.json({ status: 'error', error: 'Registration failed: ' + err.message });
+  }
+});
+//CashFlow
+app.post('/cash', async (req, res) => { 
+  try {
+
+    // user enter data
+    console.log('Creating user with data:', {
+      cash_inflow: req.body.cash_inflow,
+      cash_outflow: req.body.cash_outflow,
+      CashFlow_type: req.body.CashFlow_type,
+    });
+
+    await CashFlow.create({
+      cash_inflow: req.body.cash_inflow,
+      cash_outflow: req.body.cash_outflow,
+      CashFlow_type: req.body.CashFlow_type,
+    });
+    
+    res.json({ status: 'ok' });
+  } catch (err) {
+    console.error('Error during user registration:', err);
+    res.json({ status: 'error', error: 'Registration failed: ' + err.message });
+  }
+});
+//Expense dat 
+app.post('/expense', async (req, res) => { 
+  try {
+
+    // user enter data
+    console.log('Creating user with data:', {
+      expense_type: req.body.expense_type,
+      amount: req.body.amount,
+    });
+
+    await Expense.create({
+      expense_type: req.body.expense_type,
+      amount: req.body.amount,
+    });
+    
+    res.json({ status: 'ok' });
+  } catch (err) {
+    console.error('Error during user registration:', err);
+    res.json({ status: 'error', error: 'Registration failed: ' + err.message });
+  }
+});
+//Revenu dat 
+app.post('/revenu', async (req, res) => { 
+  try {
+
+    // user enter data
+    console.log('Creating user with data:', {
+      revenue_type: req.body.revenue_type,
+      client_id:"63701cc1f03239c72c00017f",
+      amount: req.body.amount,
+    });
+    
+    
+    await Revenu.create({
+      revenue_type: req.body.revenue_type,
+      client_id:"63701cc1f03239c72c00017f",
+      amount: req.body.amount,
+    });
+    
+    res.json({ status: 'ok' });
+  } catch (err) {
+    console.error('Error during user registration:', err);
+    res.json({ status: 'error', error: 'Registration failed: ' + err.message });
+  }
+});
+//Goal data 
+app.post('/kpi', async (req, res) => { 
+  try {
+
+    // user enter data
+    console.log('Creating user with data:', {
+      kpi_profit_value: req.body.kpi_profit_value,
+      kpi_expense_value: req.body.kpi_expense_value,
+      kpi_cashFlow_value: req.body.kpi_cashFlow_value,
+      kpi_profit_gaol_value: req.body.kpi_profit_gaol_value,
+      kpi_expense_gaol_value: req.body.kpi_expense_gaol_value,
+      kpi_cashFlow_gaol_value: req.body.kpi_cashFlow_gaol_value,
+    });
+
+    await Kpi.create({
+      kpi_profit_value: req.body.kpi_profit_value,
+      kpi_expense_value: req.body.kpi_expense_value,
+      kpi_cashFlow_value: req.body.kpi_cashFlow_value,
+      kpi_profit_gaol_value: req.body.kpi_profit_gaol_value,
+      kpi_expense_gaol_value: req.body.kpi_expense_gaol_value,
+      kpi_cashFlow_gaol_value: req.body.kpi_cashFlow_gaol_value,
     });
     
     res.json({ status: 'ok' });
