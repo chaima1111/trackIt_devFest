@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {BrowserRouter, Routes,Route } from 'react-router-dom'
 import Fomr1 from './components/form/Form1'
 import Fomr2 from './components/form/Form2'
@@ -14,9 +15,13 @@ import './App.css'
 
 
 
+=======
+import Forms from "./Forms";
+import './App.css';
+>>>>>>> 1aed70f323d1d2ed77fa78fbd2b8db1456004929
 function App() {
-
   return (
+<<<<<<< HEAD
     <BrowserRouter>
     <Routes>
      
@@ -35,6 +40,13 @@ function App() {
     </BrowserRouter>
   
   )
+=======
+    <div>
+      Here
+      <Forms />
+    </div>
+  );
+>>>>>>> 1aed70f323d1d2ed77fa78fbd2b8db1456004929
 }
 
-export default App
+export default App;
