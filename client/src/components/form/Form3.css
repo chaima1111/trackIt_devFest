@@ -1,4 +1,4 @@
-.form-container {
+.Form1-form-container {
   text-align: center;
 }
 form {
@@ -9,7 +9,7 @@ form {
     gap: 30px;
   }
 
-.input-group {
+.Form1-input-group {
   display: flex;
   flex-direction: row;
   gap: 50px;
