@@ -1,0 +1,33 @@
+
+
+
+.head{
+    
+    margin-top: 20px;
+    margin-right: 20px;
+    height: 80px;
+   display: flex;
+   justify-content: space-between;
+    
+} 
+
+
+.Login{
+    border: none;
+    background-color: rgba(0, 121, 254, 1) ;
+    color: white;
+    border-radius: 15px;
+    height: 28px;
+    width: 90px;
+    margin-right: 5px;
+}
+
+a {
+    margin-top: 4px;
+    margin-right: 10px;
+    color: black ;
+}
+
+.logo{
+    width: 10%;
+}

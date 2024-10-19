@@ -1,0 +1,42 @@
+
+.container_Success{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.container_Success_1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.container_Success_1 p{
+color: rgba(0, 0, 0, 0.5);
+
+}
+
+.container_Success_1 button{
+    background-color: rgba(0, 121, 254, 1);
+    border-radius: 30px;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px; 
+    cursor: pointer;
+}
+
+.firstimage{
+    position: relative;
+    top: 270px;
+    right: 140px;
+
+}
+
+.image1{
+    position: relative ;
+    left: 185px;
+    top: 130px;
+}
+
+

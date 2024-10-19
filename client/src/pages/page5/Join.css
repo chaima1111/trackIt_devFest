@@ -1,0 +1,58 @@
+
+
+
+.join_container{
+display: flex;
+justify-content: center;
+
+
+}
+
+.imagecontain{
+    position: relative;
+    right: 170px;
+    top: 130px;
+
+}
+
+.join_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    bottom: 130px;
+}
+
+.imagesaly4{
+    position: relative;
+    left: 120px;
+    top: 60px;
+}
+
+.fatherPos{
+position: relative;
+left: 185px;
+}
+
+.image_left{
+    position: relative;
+    bottom: 30px;
+}
+
+
+.form_button{
+border-radius: 20px;
+width: 200px;
+
+}
+
+.join_form input{
+    border-radius: 10px;
+    height: 45px;
+    width: 270px;
+    border: gray;
+}
+
+.join_form p{
+    color: rgba(0, 0, 0, 0.5);
+}

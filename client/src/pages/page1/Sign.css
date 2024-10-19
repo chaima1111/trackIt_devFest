@@ -1,0 +1,70 @@
+
+
+.firstcontainer {
+    width: 100vh;
+    height: 100%;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between ;
+    align-items: center;
+}
+
+.formul{
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputs{
+    border-radius: 10px;
+    height: 50px;
+    width: 280px;
+    background-color: white;
+    border : rgba(0, 0, 0, 0.151) solid;
+    
+}
+
+
+.submission{
+    display: flex;
+    justify-content:flex-end;
+    width: 10%;
+    position: relative;
+    left: 100%;
+    background: none;
+    border: none;
+    font-size: 20px;
+    text-decoration: none; 
+}
+
+
+.imgCont{
+    margin: 20px;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+  
+
+
+
+/* 
+@media ( max-width:600px){
+    .section{
+        position: relative;
+        
+    }
+
+    .sections{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        top: 2px;
+
+    }
+
+} */
