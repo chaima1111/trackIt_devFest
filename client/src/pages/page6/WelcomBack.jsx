@@ -1,7 +1,7 @@
 import React from "react";
 import Header from '../../components/header1/Navbar';
 import './WelcomBack.css'
-import imagecontainer4 from '../../assets/Container_(4).png' 
+// import imagecontainer4 from '../../assets/Container_(4).png' 
 import imageSaly5 from '../../assets/slay5.png'
 import imageSaly6 from '../../assets/saly6.png'
 import containerright from '../../assets/Container_right.png'
@@ -58,7 +58,7 @@ function WelcomBack(){
           </div>  
            
           <div className="images2_container">
-             <img className="images2_container_1st" src={containerright}/>
+             {/* <img className="images2_container_1st" src={containerright}/> */}
              <img className="images2_container_2nd" src={imageSaly5}/>
 
           </div>
