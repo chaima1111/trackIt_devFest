@@ -7,11 +7,19 @@ import chart_right from "../../assets/04.png";
 import chart_left from "../../assets/Container.png";
 import { Link } from "react-router-dom";
 function Form1() {
-
-
-
-
- 
+  // const [name,setName]=useState();
+  // const [email,setEmail]=useState();
+  // const [company,setCompany]=useState();
+  // const [password,setPassword]=useState();
+  // const navigate= useNavigate()
+  // const handleSubmit =(e)=>{
+  //     e.preventDefault()
+  //     axios.post('http://localhost:5001/register',{name,email,company,password})
+  //     .then(result=>{console.log(result)
+  //         navigate('/form1')
+  //     })
+  //     .catch(err=>console.log(err))
+  // }
   
   return (
     <div className="Form1-container">
