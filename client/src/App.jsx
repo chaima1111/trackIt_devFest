@@ -9,7 +9,8 @@ import WorkSpace from './pages/page3/Workspace';
 import Success from './pages/page4/Success';
 import  Join from './pages/page5/Join';
 import WelcomBack from './pages/page6/WelcomBack';
-import Lending from './pages/page7/Lending';
+import LandingPage from "./pages/landing/landingPage"
+import Dashboard from "./pages/dashboard/Dashboard"
 import './App.css'
 
 
@@ -28,7 +29,8 @@ import './App.css'
         <Route path='/success' element={<Success/>}/>
         <Route path='/join' element={<Join/>}/>
         <Route path='/welcomback' element={<WelcomBack/>}/>
-        <Route path='/' element={<Lending/>}/>
+        <Route path='/' element={<LandingPage/>}/>
+        <Route path='/dashboard' element={<Dashboard/>}/>
       </Routes>
       </BrowserRouter>
     

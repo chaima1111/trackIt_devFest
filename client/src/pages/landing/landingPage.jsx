@@ -11,7 +11,7 @@ import avatar1 from "./assets/avatar1.png";
 import avatar2 from "./assets/avatar2.png";
 import avatar3 from "./assets/avatar3.png";
 import feedback from "./assets/feedback.png";
-
+import landi from "./assets/Saly2.png"
 import FaTwitter from "./assets/twitter.png";
 import FaGithub from "./assets/github.png";
 import FaFacebook from "./assets/facebook.png";
@@ -59,7 +59,7 @@ const LandingPage = () => {
         </div>
 
         <div className="landingPage-hero-illustration">
-          <img src="Group 1532.png" alt="" />
+          <img src={landi} alt="" />
         </div>
       </section>
       <section className="landingPage-services">

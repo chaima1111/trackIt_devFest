@@ -3,6 +3,7 @@
 import React from "react";
 import './head.css' ;
 import logoimage from '../../assets/logo.png'
+import { Link } from "react-router-dom";
 
 function Header (){
 return(
@@ -11,10 +12,8 @@ return(
     
     <header className="head">
         <img className="logo" src={logoimage} alt="logo img"></img>
-        <div>
-        <button className="Login">Log in</button>
-        <button className="singup">Sign up</button>
-        </div>
+       <button  className="container_singup"> <Link to="/sign">Sign up</Link></button>
+   <button className="Login"><Link to="/welcomback">Log in</Link></button>
     </header> 
     
 

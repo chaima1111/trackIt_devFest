@@ -277,3 +277,25 @@ app.post('/kpi', async (req, res) => {
     res.json({ status: 'error', error: ' failed: ' + err.message });
   }
 });
+
+
+////////////////***fetching data  ****/
+
+app.get('/workspace/code', async (req, res) => {
+  try {
+      const name = req.query.name;  // Get the workspace name from the query parameter
+
+      // Fetch the workspace document based on the name
+      const workspace = await WorkspaceTeam.findOne({ Workspacee_name: name });
+
+      if (workspace) {
+          res.json({ code: workspace.Workspacee_code });
+      } else {
+          res.status(404).json({ error: 'Workspace name not found' });
+      }
+  } catch (err) {
+      console.error(err);
+      res.status(500).json({ error: 'Internal server error' });
+  }
+});
+

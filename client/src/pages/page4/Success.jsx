@@ -3,7 +3,7 @@ import imagecircles from '../../assets/circles2.png';
 import imageshema from '../../assets/shema.png';
 import imageSaly2 from '../../assets/Saly2.png';
 import './Success.css'
-
+import { Link } from "react-router-dom";
 function Success(){
 return(
     <>
@@ -16,7 +16,7 @@ return(
      <div className="container_Success_1">
           <h1>Workspace created successfully</h1>
           <p>You will receive the code in email</p>
-          <button>Go to workspace &#10145; </button>
+          <Link to="/dashboard">Go to workspace &#10145; </Link>
           <img className="imagesaly" src={imageSaly2}/>
      </div>
 

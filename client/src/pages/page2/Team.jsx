@@ -21,7 +21,7 @@ function Team (){
                 <section className="sections_section">
                     <img src={logimage} className="BigImg"></img>
                     <h2>Join an existing Team</h2>
-                    <button className="Join_button">Join</button>
+                    <Link to="/join" className="Join_button">Join</Link>
                 </section>
             
             </div>
