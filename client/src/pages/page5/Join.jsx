@@ -1,8 +1,8 @@
 import './Join.css';
 import imagesaly3 from '../../assets/saly3.png';
 import imagesaly4 from '../../assets/saly4.png';
-import imagecontainer1 from '../../assets/container_(1).png'
-import imagecontainer2 from '../../assets/Container_(2).png'
+//import imagecontainer1 from '../../assets/container_(1).png'
+//import imagecontainer2 from '../../assets/Container_(2).png'
 // import imagesaly3 from '../../assets/saly3.png'
 // import imagesaly4 from '../../assets/saly4.png'
 import  { useState } from 'react';
