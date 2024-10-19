@@ -1,15 +1,10 @@
 import './Join.css';
-<<<<<<< HEAD
-import imagecontainer1 from '../../assets/container (1).png';
-import imagecontainer2 from '../../assets/container (2).png';
 import imagesaly3 from '../../assets/saly3.png';
 import imagesaly4 from '../../assets/saly4.png';
-=======
 import imagecontainer1 from '../../assets/container_(1).png'
 import imagecontainer2 from '../../assets/Container_(2).png'
-import imagesaly3 from '../../assets/saly3.png'
-import imagesaly4 from '../../assets/saly4.png'
->>>>>>> 1769004 (changes)
+// import imagesaly3 from '../../assets/saly3.png'
+// import imagesaly4 from '../../assets/saly4.png'
 import  { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -57,7 +52,7 @@ function Join (){
 
          <div className="join_container">
             <section>
-                <img className="imagecontain" src={imagecontainer2}/>
+                {/* <img className="imagecontain" src={imagecontainer2}/> */}
                 <img className="imagesaly4" src={imagesaly4}/>
             </section>
 
@@ -92,7 +87,7 @@ function Join (){
             </form>
             </div>
             <section className="fatherPos">
-            <img className="image_left" src={imagecontainer1}/>
+            {/* <img className="image_left" src={imagecontainer1}/> */}
             <img  src={imagesaly3}/>
             </section>
          </div>
