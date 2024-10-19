@@ -1,11 +1,10 @@
-import React from "react";
 import './Team.css'
 import Header from "../../components/header1/Navbar";
 import imagetable from '../../assets/table.png'
 import Signimage from '../../assets/Sign.png'
 import logimage from '../../assets/Log.png'
 import columnimage from '../../assets/Columns.png'
-
+import { Link } from "react-router-dom";
 
 
 function Team (){
@@ -19,7 +18,7 @@ function Team (){
                 <section className="sections_section">
                     <img src={Signimage} className="person"></img>
                     <h2>Create a new Team</h2>
-                    <button className="Create_button">Create</button>
+                    <Link to="/workspace" className="Create_button">Create</Link>
                 </section>
                 <section className="sections_section">
                     <img src={logimage} className="BigImg"></img>

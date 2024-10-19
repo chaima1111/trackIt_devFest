@@ -15,7 +15,7 @@ return(
         
         <img className="logo" src={logoimage} alt="logo img"/>
         
-        <div>
+        <div className="nav_buttons">
           <a href="h">Already have a count ?</a>
           <button className="Login">LOG IN</button>
         </div>

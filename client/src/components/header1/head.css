@@ -1,12 +1,14 @@
+.containerNav
+{
 
-
-
+}
 .head{
     
     margin-top: 20px;
     margin-right: 20px;
     height: 80px;
    display: flex;
+   align-items: center;
    justify-content: space-between;
     
 } 
@@ -20,14 +22,24 @@
     height: 28px;
     width: 90px;
     margin-right: 5px;
+    padding: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav_buttons{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 a {
     margin-top: 4px;
     margin-right: 10px;
     color: black ;
+
 }
 
 .logo{
-    width: 10%;
+    width: 12%;
 }

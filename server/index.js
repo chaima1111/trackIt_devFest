@@ -10,6 +10,7 @@ import clientRoutes from "./routes/client.js";
 import generalRoutes from "./routes/general.js";
 import managementRoutes from "./routes/management.js";
 import expenseRoute from "./routes/expense.js";
+import jwt from "jsonwebtoken"
 
 // data imports
 
@@ -42,23 +43,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
-/* Login */
-// app.post('/login',(req,res)=>{
-//     const {name,email,company,password,}=req.body;
-//     User.findOne({email:email})
-//     .then(user => {
-//         if(user){
-//           workspace_id,role
-//             if(user.password === password){
-//                 res.json("success")
-//             }else{
-//                 res.json("the password is wrong")
-//             }
-//         }else{
-//             res.json("accound didn't exist")
-//         }
-//     })
-// })
+
 
 
 
@@ -116,6 +101,36 @@ app.post('/register', async (req, res) => {
     res.json({ status: 'error', error: 'Registration failed: ' + err.message });
   }
 });
+
+app.post('/login', async (req, res) => {
+	const user = await User.findOne({
+		email: req.body.email,
+	})
+
+	if (!user) {
+		return { status: 'error', error: 'Invalid login' }
+	}
+
+	const isPasswordValid = await bcrypt.compare(
+		req.body.password,
+		user.password
+	)
+
+	if (isPasswordValid) {
+		const token = jwt.sign(
+			{
+				name: user.name,
+				email: user.email,
+			},
+			'secret123'
+		)
+
+		return      res.json("success")
+
+	} else {
+		return res.json("the password is wrong")
+	}
+})
 //CashFlow
 app.post('/cash', async (req, res) => { 
   try {
@@ -135,8 +150,8 @@ app.post('/cash', async (req, res) => {
     
     res.json({ status: 'ok' });
   } catch (err) {
-    console.error('Error during user registration:', err);
-    res.json({ status: 'error', error: 'Registration failed: ' + err.message });
+    console.error('Error ', err);
+    res.json({ status: 'error', error: ' failed: ' + err.message });
   }
 });
 //Expense dat 
@@ -156,8 +171,8 @@ app.post('/expense', async (req, res) => {
     
     res.json({ status: 'ok' });
   } catch (err) {
-    console.error('Error during user registration:', err);
-    res.json({ status: 'error', error: 'Registration failed: ' + err.message });
+    console.error('Error :', err);
+    res.json({ status: 'error', error: ' failed: ' + err.message });
   }
 });
 //Revenu dat 
@@ -180,8 +195,31 @@ app.post('/revenu', async (req, res) => {
     
     res.json({ status: 'ok' });
   } catch (err) {
-    console.error('Error during user registration:', err);
-    res.json({ status: 'error', error: 'Registration failed: ' + err.message });
+    console.error('Error:', err);
+    res.json({ status: 'error', error: ' failed: ' + err.message });
+  }
+});
+//Wokspace data
+app.post('/workspace', async (req, res) => { 
+  try {
+    const workspacenb = Math.floor(1000 + Math.random() * 9000);
+
+    // user enter data
+    console.log('Creating user with data:', {
+      Workspacee_field: req.body.Workspacee_field,
+      Workspacee_code: workspacenb,
+    });
+    
+    
+    await Workspace.create({
+      Workspacee_field: req.body.Workspacee_field,
+      Workspacee_code: workspacenb,
+    });
+    
+    res.json({ status: 'ok' });
+  } catch (err) {
+    console.error('Error :', err);
+    res.json({ status: 'error', error: ' failed: ' + err.message });
   }
 });
 //Goal data 
@@ -209,7 +247,7 @@ app.post('/kpi', async (req, res) => {
     
     res.json({ status: 'ok' });
   } catch (err) {
-    console.error('Error during user registration:', err);
-    res.json({ status: 'error', error: 'Registration failed: ' + err.message });
+    console.error('Error:', err);
+    res.json({ status: 'error', error: ' failed: ' + err.message });
   }
 });

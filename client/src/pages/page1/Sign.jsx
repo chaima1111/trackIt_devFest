@@ -1,30 +1,76 @@
-
-
-
 import Header from "../../components/header1/Navbar";
-import { Link } from "react-router-dom";
 import image1 from "../../assets/problem.png";
 import './Sign.css';
+import { useState } from "react";
+import axios from "axios"
+import { useNavigate } from "react-router-dom";
 
 
 function Sign (){
-
+    const [name,setName]=useState();
+    const [email,setEmail]=useState();
+    const [company,setCompany]=useState();
+    const [password,setPassword]=useState();
+    const navigate= useNavigate()
+    const handleSubmit =(e)=>{
+        e.preventDefault()
+       
+        axios.post('http://localhost:5001/register',{name,email,company,password})
+        .then(result=>{console.log(result)
+            navigate('/form1')
+        })
+        .catch(err=>console.log(err))
+    }
     return(
     <>
     
     <Header/>
     <div className="firstcontainer"> 
     
-     <div className="imgCont">
+   
+    <div className="imgCont">
       <img src={image1} alt="img" />
      </div>
+        <h1>L&apos;ets get you started</h1>
+        <form  className="formul" onSubmit={handleSubmit}>
+              <input className="inputs_sign" 
+                type="text"
+                id="name"
+                name="name"
+                placeholder="name"                onChange={(e)=>setName(e.target.value)}
+                required
+              />
+            
+              <input className="inputs_sign" 
+                type="email"
+                id="email"
+                name="email"
+                 placeholder="Email Adress"
+                onChange={(e)=>setEmail(e.target.value)}
+                required
+              />
         
-     <form className="formul">
-        <h1>L'ets get you started</h1>
-        <input className="inputs" type="email" placeholder="Email Adress" required name="email" ></input>
-        <input className="inputs" type="text" placeholder="user name" required name="name" ></input>
-        <button  type="submit" className="submission" > <Link to="/team"> Next</Link></button>
-     </form>
+              <input className="inputs_sign" 
+                type="text"
+                id="company"
+                name="comany"
+                 placeholder="company"
+                onChange={(e)=>setCompany(e.target.value)}
+                required
+              />
+         
+          
+              <input className="inputs_sign" 
+                type="password"
+                id="password"
+                name="password"
+                 placeholder="password"
+                onChange={(e)=>setPassword(e.target.value)}
+                required
+              />
+    
+            <button   type="submit">Submit</button>
+          </form>
      </div>
     </>
     )

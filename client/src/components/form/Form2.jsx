@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import logo from "../../assets/logo.trakcit.png";
 import ec1 from "../../assets/Ellipse 830.png";
 import ec2 from "../../assets/Ellipse 831.png";
