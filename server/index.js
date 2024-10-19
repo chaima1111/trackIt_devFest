@@ -20,6 +20,7 @@ import Expense from "./models/Expense.js";
 import Kpi from "./models/Kpi.js";
 import Revenu from "./models/Revenu.js";
 import Workspace from "./models/Workspace.js";
+import WorkspaceTeam from "./models/WorkspaceTema.js";
 import OverallStat from "./models/OverallSatt.js";
 
 import {
@@ -206,12 +207,14 @@ app.post('/workspace', async (req, res) => {
 
     // user enter data
     console.log('Creating user with data:', {
+      Workspacee_name: req.body.Workspacee_name,
       Workspacee_field: req.body.Workspacee_field,
       Workspacee_code: workspacenb,
     });
     
     
-    await Workspace.create({
+    await WorkspaceTeam.create({
+      Workspacee_name: req.body.Workspacee_name,
       Workspacee_field: req.body.Workspacee_field,
       Workspacee_code: workspacenb,
     });
@@ -222,6 +225,29 @@ app.post('/workspace', async (req, res) => {
     res.json({ status: 'error', error: ' failed: ' + err.message });
   }
 });
+// //Wokspace data
+// app.post('/workspace', async (req, res) => { 
+//   try {
+//     const workspacenb = Math.floor(1000 + Math.random() * 9000);
+
+//     // user enter data
+//     console.log('Creating user with data:', {
+//       Workspacee_field: req.body.Workspacee_field,
+//       Workspacee_code: workspacenb,
+//     });
+    
+    
+//     await Workspace.create({
+//       Workspacee_field: req.body.Workspacee_field,
+//       Workspacee_code: workspacenb,
+//     });
+    
+//     res.json({ status: 'ok' });
+//   } catch (err) {
+//     console.error('Error :', err);
+//     res.json({ status: 'error', error: ' failed: ' + err.message });
+//   }
+// });
 //Goal data 
 app.post('/kpi', async (req, res) => { 
   try {

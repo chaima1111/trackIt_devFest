@@ -8,11 +8,12 @@ import { useNavigate } from "react-router-dom";
 function WorkSpace(){
 
 
+        const [Workspacee_name,setWorkspacee_name]=useState();
         const [Workspacee_field,setWorkspacee_field]=useState();
         const navigate= useNavigate()
         const handleSubmit =(e)=>{
             e.preventDefault()
-            axios.post('http://localhost:5001/workspace',{Workspacee_field})
+            axios.post('http://localhost:5001/workspace',{Workspacee_field,Workspacee_name})
             .then(result=>{console.log(result)
                 navigate('/form1')
             })
@@ -26,6 +27,10 @@ function WorkSpace(){
            
             <form className="formulaire" onSubmit={handleSubmit}> 
               <h2>Lest&apos;s create your work space</h2>
+              <input className="formulaire_input" type="text" placeholder="field" required 
+                     id="Workspacee_name"
+                     name="Workspacee_name"
+                     onChange={(e)=>setWorkspacee_name(e.target.value)} ></input>
               <input className="formulaire_input" type="text" placeholder="field" required 
                      id="Workspacee_field"
                      name="Workspacee_field"
