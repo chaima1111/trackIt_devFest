@@ -17,7 +17,7 @@ function Sign (){
        
         axios.post('http://localhost:5001/register',{name,email,company,password})
         .then(result=>{console.log(result)
-            navigate('/form1')
+            navigate('/team')
         })
         .catch(err=>console.log(err))
     }

@@ -1,6 +1,5 @@
 import React from "react";
 import './Join.css';
-import Header from '../../components/header1/Navbar'
 import imagecontainer1 from '../../assets/container (1).png'
 import imagecontainer2 from '../../assets/container (2).png'
 import imagesaly3 from '../../assets/saly3.png'
@@ -10,7 +9,6 @@ import imagesaly4 from '../../assets/saly4.png'
 function Join (){
     return(
         <>
-         <Header/>
          
 
          <div className="join_container">

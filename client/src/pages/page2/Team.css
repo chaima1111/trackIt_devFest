@@ -1,84 +1,84 @@
-
-
 .sections{
-width: 1300px;
-height: 450px;
-display: flex;
-justify-content:space-around;
-position: absolute;
-bottom: 100px;
-z-index: 1;
-
-}
-
-
-.sections_section{
-    
-    background-color:white;
-    height: 400px;
-    width: 300px;
-    border-radius: 20px;
+    width: 1300px;
+    height: 450px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-   
-}
-
-.Join_button{
-    height:10%;
-    width: 25%;
-    border-radius: 20px;
-    border: none;
-}
-.Create_button{
-    height: 10%;
-    width: 25%;
-    border-radius: 20px;
-    border: none;
-   
-}
-
-.BigImg{
-    height:220px;
-    
-}
-
-
-.pos{
-    display: flex;
-    justify-content: end;
-   
-   
-}
-
-.pos img{
-    position: absolute ;
-    bottom: 10px;
-    width: 30%;
-    height: 40%;
-}
-
-.column{
-    width: 350px;
+    justify-content:space-around;
     position: absolute;
-    left: 100px;
-}
-
-
-.person{
-    height: 220px;
-}
-
-.Join_button{
-    background-color: rgba(0, 121, 254, 1) ;
-    color: white;
-}
-
-@media (max-width : 680px){
-    .sections{
+    bottom: 100px;
+    z-index: 1;
+    
+    }
+    
+    
+    .sections_section{
+    
+        background-color:white;
+        height: 400px;
+        width: 300px;
+        border-radius: 20px;
         display: flex;
         flex-direction: column;
-        justify-content: center ;
+        justify-content: center;
+        align-items: center;
+    
     }
-}
+    
+    .Join_button{
+        height:10%;
+        width: 25%;
+        border-radius: 20px;
+        border: none;
+    }
+    .Create_button{
+        height: 10%;
+        width: 25%;
+        border-radius: 20px;
+        border: none;
+    
+    }
+    
+    .BigImg{
+        height:220px;
+    
+    }
+    
+    
+    .pos{
+        display: flex;
+        justify-content: end;
+    
+    
+    }
+    
+    .pos img{
+        position: absolute ;
+        bottom: 10px;
+        width: 30%;
+        height: 40%;
+    }
+    
+    .column{
+        width: 350px;
+        position: absolute;
+        left: 100px;
+    }
+    
+    
+    .person{
+        height: 220px;
+    }
+    
+    .Join_button{
+        background-color: rgba(0, 121, 254, 1) ;
+        color: white;
+    }
+    
+    
+    
+    @media (max-width : 680px){
+        .sections{
+            display: flex;
+            flex-direction: column;
+            justify-content: center ;
+        }
+    }

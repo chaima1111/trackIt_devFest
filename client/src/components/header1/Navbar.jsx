@@ -3,6 +3,7 @@
 import React from "react";
 import './head.css' ;
 import logoimage from '../../assets/logo.png'
+import { Link } from "react-router-dom";
 
 
 
@@ -16,8 +17,8 @@ return(
         <img className="logo" src={logoimage} alt="logo img"/>
         
         <div className="nav_buttons">
-          <a href="h">Already have a count ?</a>
-          <button className="Login">LOG IN</button>
+          <Link to="/welcomback">Already have an account ?</Link>
+          <Link to="/sign" className="Login">Sign In</Link>
         </div>
         
     </header> 

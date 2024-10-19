@@ -1,6 +1,5 @@
 import React ,{useState}from "react";
 import './workspace.css';
-import Header from "../../components/header1/Navbar";
 import circleimage from '../../assets/circle.png'
 import slayimage from '../../assets/saly.png'
 import axios from "axios"
@@ -22,7 +21,6 @@ function WorkSpace(){
         }
     return(
         <>
-        <Header/>
         <div className="pageContainer">
            
             <form className="formulaire" onSubmit={handleSubmit}> 

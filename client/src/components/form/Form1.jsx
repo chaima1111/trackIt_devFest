@@ -45,7 +45,7 @@ function Form1() {
           <span className="active">Cost flow</span> ──
           <span>Expenses</span> ──
           <span>Revenue</span> ──
-          <span>KPI goal</span>
+          {/* <span>KPI goal</span> */}
         </nav>
 
         <form onSubmit={handleSubmit}>

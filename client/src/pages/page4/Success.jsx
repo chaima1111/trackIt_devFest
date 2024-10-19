@@ -1,5 +1,4 @@
 import React from "react";
-import Header from '../../components/header1/Navbar';
 import imagecircles from '../../assets/circles2.png';
 import imageshema from '../../assets/shema.png';
 import imageSaly2 from '../../assets/Saly2.png';
@@ -8,7 +7,6 @@ import './Success.css'
 function Success(){
 return(
     <>
-    <Header/>
     <div className="container_Success">
 
      <div className="firstimage">

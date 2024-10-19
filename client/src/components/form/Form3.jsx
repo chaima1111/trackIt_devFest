@@ -17,7 +17,7 @@ function Form3() {
       e.preventDefault()
       axios.post('http://localhost:5001/expense',{expense_type,amount})
       .then(result=>{console.log(result)
-          navigate('/form3')
+          navigate('/success')
       })
       
       .catch(err=>console.log(err))

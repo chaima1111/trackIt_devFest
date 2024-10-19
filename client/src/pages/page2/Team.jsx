@@ -1,5 +1,4 @@
 import './Team.css'
-import Header from "../../components/header1/Navbar";
 import imagetable from '../../assets/table.png'
 import Signimage from '../../assets/Sign.png'
 import logimage from '../../assets/Log.png'
@@ -10,7 +9,6 @@ import { Link } from "react-router-dom";
 function Team (){
     return(
         <>
-        <Header/>
         <div className="Bigdiv">
             <img className="column" src={imagetable}/>
             

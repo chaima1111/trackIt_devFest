@@ -31,7 +31,7 @@ function Form4() {
           <span>Cost flow</span> ──
           <span>Expenses</span> ──
           <span>Revenue</span> ──
-          <span className="active">KPI goal</span>
+          {/* <span className="active">KPI goal</span> */}
         </nav>
 
         <form className="Form4">
