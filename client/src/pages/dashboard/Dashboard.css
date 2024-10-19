@@ -1,0 +1,109 @@
+.questrial-regular {
+    font-family: "Questrial", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(900px, 1fr));
+    font-family: "Questrial", sans-serif;
+    margin: 0;
+    background-image:url('./background.png');
+    background-size: 1400px 900px;  
+    background-repeat: no-repeat; 
+    background-position: right center;
+    color: #333;
+    display: flex;
+    height: 100vh;
+  }
+  .dashboard-card1{
+    display: flex;
+    flex-direction: column;
+  }
+  .dashboard-cards{
+    margin-top: -30px;
+    margin-left: -20px;
+    display: flex;
+    flex-direction: row;
+  }
+  .dashboard-top{
+    
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+  
+  .dashboard-main-content {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+  }
+  
+  .dashboard-header {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .dashboard-overview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  
+  .dashboard-h1 {
+    margin: 1rem 0;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .card {
+    font-family: "Questrial", sans-serif;
+      padding: 20px;
+      border-radius: 12px;
+      margin: 16px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      width: 140px;
+      color: black;
+      transition: transform 0.3s;
+    }
+    
+    .card h3 {
+      margin: 0;
+      font-size: 0.7rem;
+    }
+    
+    .card p {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    
+    .card span {
+      font-size: 0.8rem;
+      opacity: 0.8;
+    }
+    
+    .card:hover {
+      transform: scale(1.05);
+    }
+    
+    /* Specific color styles */
+    .blue {
+      background-color: #8EBCFF;
+    }
+    
+    .red {
+      background-color: #DDCCD3;
+    }
+    
+    .pink {
+      background-color: #FFC7C7;
+    }
+    
+    .light-blue {
+      background-color: #C0DBFA;
+    }

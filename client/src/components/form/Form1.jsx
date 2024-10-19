@@ -5,7 +5,7 @@ import ec1 from "../../assets/Ellipse 830.png";
 import ec2 from "../../assets/Ellipse 831.png";
 import chart_right from "../../assets/04.png";
 import chart_left from "../../assets/Container.png";
-import axios from "axios"
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
 function Form1() {
   const [cash_inflow,setCash_inflow]=useState();

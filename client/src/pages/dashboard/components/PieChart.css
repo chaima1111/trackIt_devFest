@@ -1,0 +1,15 @@
+/* components/PieChart.css */
+
+
+.pie-chart-container {
+
+  width: 350px; /* Adjust the size */
+  height: 350px; /* Adjust the size */
+  padding: 10px;
+  font-family: "Questrial", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+

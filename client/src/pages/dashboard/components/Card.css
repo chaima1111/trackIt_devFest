@@ -1,0 +1,51 @@
+/* components/Card.css */
+.card {
+  font-family: "Questrial", sans-serif;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 16px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 140px;
+    color: black;
+    transition: transform 0.3s;
+  }
+  
+  .card h3 {
+    margin: 0;
+    font-size: 0.7rem;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .card span {
+    font-size: 0.8rem;
+    opacity: 0.8;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Specific color styles */
+  .blue {
+    background-color: #8EBCFF;
+  }
+  
+  .red {
+    background-color: #DDCCD3;
+  }
+  
+  .pink {
+    background-color: #FFC7C7;
+  }
+  
+  .light-blue {
+    background-color: #C0DBFA;
+  }
+  

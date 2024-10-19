@@ -7,7 +7,7 @@ import imageSaly6 from '../../assets/saly6.png'
 import containerright from '../../assets/Container_right.png'
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios"
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 
